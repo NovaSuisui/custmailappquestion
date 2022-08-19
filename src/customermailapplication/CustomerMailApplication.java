@@ -23,6 +23,12 @@ public class CustomerMailApplication {
             case "Regular":
                 customer = new RegularCustomer();
                 break;
+            case "Mountain":
+                customer = new MountainCustomer();
+                break;
+            case "Delinquent":
+                customer = new DelinquentCustomer();
+                break;
             //complete MountainCustomer
             //complete DelinquentCustomer 
         }
@@ -34,7 +40,7 @@ public class CustomerMailApplication {
     public static void main(String[] args) {
         CustomerMailApplication app = new CustomerMailApplication();
         Scanner inp = new Scanner(System.in);
-        System.out.print("Please choose customer type 1. Regular, 2. Mountain, 3. Delinquent ");
+        System.out.print("Please choose customer type 1. Regular, 2. Mountain, 3. Delinquent : ");
         int type = inp.nextInt();
         switch(type) {
             case 1:
